@@ -9,11 +9,15 @@ for (dirpath, dirnames, filenames) in os.walk(os.getcwd()):
     files.extend(filenames)
     break
 
-#remove main.py from the list
+#remove main.py from the list, could make this more efficient but too lazy
 while ("main.py" in files):
     files.remove("main.py")
 while ("main.exe" in files):
     files.remove("main.exe")
+while (".gitignore" in files):
+    files.remove(".gitignore")
+while ("README.md" in files):
+    files.remove("README.md")
 
 #tell the user how many JSON's there are
 print("There are", len(files), "JSON's.")
