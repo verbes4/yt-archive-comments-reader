@@ -30,7 +30,7 @@ picked=picked-1
 print("You picked", files[picked])
 
 #opens the json file
-file = open(files[picked])
+file = open(files[picked], encoding='utf-8')
 #loads it as a list in python
 loaded = json.load(file)
 #prints how many comments there are
@@ -54,3 +54,4 @@ print("Time", splitDate[1])
 print("Likes:", comment['likes'])
 print("Replies:", comment['replyCount'])
 print("Commenters PFP:", authorStuff['thumbUrl'])
+input()
