@@ -12,6 +12,8 @@ for (dirpath, dirnames, filenames) in os.walk(os.getcwd()):
 #remove main.py from the list
 while ("main.py" in files):
     files.remove("main.py")
+while ("main.exe" in files):
+    files.remove("main.exe")
 
 #tell the user how many JSON's there are
 print("There are", len(files), "JSON's.")
