@@ -10,10 +10,10 @@ for (dirpath, dirnames, filenames) in os.walk(os.getcwd()):
     break
 
 #remove main.py from the list, could make this more efficient but too lazy
-while ("main.py" in files):
-    files.remove("main.py")
-while ("main.exe" in files):
-    files.remove("main.exe")
+execName = os.path.basename(__file__)
+print(execName)
+while (execName in files):
+    files.remove(execName)
 while (".gitignore" in files):
     files.remove(".gitignore")
 while ("README.md" in files):
